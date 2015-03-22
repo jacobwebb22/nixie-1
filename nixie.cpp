@@ -21,7 +21,7 @@ int main (void)
 	for (int i = 1; i <= 10000000; i++)
 	{
 	wiringPiSPIDataRW (channel, &Text, sizeof(Text)) ;
-	cout << i << endl;
+	std::cout << i << std::endl;
 	}
 
 }
