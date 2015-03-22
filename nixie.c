@@ -20,7 +20,7 @@ int main (void)
 	for (i = 1; i <= 10000000; i++)
 	{
 	wiringPiSPIDataRW (channel, &Text, sizeof(Text)) ;
-	std::cout << i << std::endl;
+	printf( "%d", i);
 	}
 
 	return 0 ;
