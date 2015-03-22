@@ -9,6 +9,11 @@
 
 int spi_cs0_fd;				//file descriptor for the SPI device
 int spi_cs1_fd;				//file descriptor for the SPI device
+
+int spifd;
+int SpiOpenPort();
+int SpiClosePort();
+
 unsigned char spi_mode;
 unsigned char spi_bitsPerWord;
 unsigned int spi_speed;
@@ -20,7 +25,7 @@ using namespace std;
 int main(void)
 {
 
-    SpiOpenPort (0);
+    SpiOpenPort(0);
 
     unsigned char one = 1;
     unsigned char two = 2;
@@ -29,11 +34,11 @@ int main(void)
 
     for (int i = 1; i <= 10; i++)
     {
-    SpiWriteRead (0, *Text, int sizeof(Text));
+    int SpiWriteRead(0, *Text, int sizeof(Text));
     cout << i << endl;
     }
 
-    SpiClosePort (0);
+    SpiClosePort(0);
    
 }
 
