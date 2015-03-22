@@ -2,7 +2,6 @@
 #include <wiringPiSPI.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <iostream.h>
 
 int channel = 0;
 int speed = 4000000;
@@ -21,7 +20,7 @@ int main (void)
 	for (i = 1; i <= 10000000; i++)
 	{
 	wiringPiSPIDataRW (channel, &Text, sizeof(Text)) ;
-	cout << i << endl;
+	printf( "%d", i);
 	}
 
 	return 0 ;
