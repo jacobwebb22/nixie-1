@@ -1,5 +1,9 @@
 #include <wiringPi.h>
 #include <wiringPiSPI.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string>
+#include <iostream>
 
 int channel = 0;
 int speed = 4000000;
@@ -16,7 +20,7 @@ int main (void)
 
 	for (int i = 1; i <= 10000000; i++)
 	{
-	wiringPiSPIDataRW (channel, Text, sizeof(Text)) ;
+	wiringPiSPIDataRW (channel, &Text, sizeof(Text)) ;
 	cout << i << endl;
 	}
 
