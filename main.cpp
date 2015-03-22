@@ -11,8 +11,6 @@ int spi_cs0_fd;				//file descriptor for the SPI device
 int spi_cs1_fd;				//file descriptor for the SPI device
 
 int spifd;
-int SpiOpenPort();
-int SpiClosePort();
 
 unsigned char spi_mode;
 unsigned char spi_bitsPerWord;
