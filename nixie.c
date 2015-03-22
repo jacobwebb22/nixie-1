@@ -16,10 +16,11 @@ int main (void)
     one = one << 4;
     unsigned char Text = one + two;
 
-	for (int i = 1; i <= 10000000; i++)
+	for (i = 1; i <= 10000000; i++)
 	{
 	wiringPiSPIDataRW (channel, &Text, sizeof(Text)) ;
-	std::cout << i << std::endl;
+//	std::cout << i << std::endl;
 	}
 
+	return 0 ;
 }
