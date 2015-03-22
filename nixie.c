@@ -2,7 +2,6 @@
 #include <wiringPiSPI.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <iostream>
 
 int channel = 0;
 int speed = 4000000;
