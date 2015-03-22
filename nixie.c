@@ -16,6 +16,7 @@ int main (void)
     one = one << 4;
     unsigned char Text = one + two;
 
+    int i = 0;
 	for (i = 1; i <= 10000000; i++)
 	{
 	wiringPiSPIDataRW (channel, &Text, sizeof(Text)) ;
