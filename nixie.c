@@ -17,17 +17,25 @@ int main (void)
 	wiringPiSPISetup (channel, speed) ;
 
 	int i = 0;
-	for (i = 1; i <= 5; i++)
+	for (i = 1; i <= 5000; i++)
 	{
 
-	one = i%10;
-	two = i/10;
+//	struct tm *tm_struct = localtime(time(NULL));
+
+	time_t rawtime;
+	struct tm *info;
+//	char buffer[80];
+	time( &rawtime );
+	info = localtime( &rawtime );
+
+	one = (unsigned char)info->tm_sec%10;
+	two = (unsigned char)info->tm_sec/10;
 	one = one << 4;
 	Text = one + two;
 
 	wiringPiSPIDataRW (channel, &Text, 1) ;
 	printf( "%d\n", i);
-	delay(1000);
+	delay(10);
 	}
 
 	return 0 ;
