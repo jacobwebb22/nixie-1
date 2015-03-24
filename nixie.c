@@ -6,6 +6,7 @@
 
 int main (void)
 {
+
 	int speed = 4000000;
 	int channel = 0;
 
@@ -20,11 +21,8 @@ int main (void)
 	for (i = 1; i <= 5000; i++)
 	{
 
-//	struct tm *tm_struct = localtime(time(NULL));
-
 	time_t rawtime;
 	struct tm *info;
-//	char buffer[80];
 	time( &rawtime );
 	info = localtime( &rawtime );
 
